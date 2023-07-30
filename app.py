@@ -1,4 +1,4 @@
-from core import app
+from core import app, httpauth
 from auth import auth_bp
 from users import users_bp
 from posts import posts_bp
