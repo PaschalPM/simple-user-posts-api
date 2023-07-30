@@ -13,8 +13,6 @@ marshmallow-sqlalchemy = "*"
 pymysql = "*"
 cryptography = "*"
 flask-session = "*"
-flask-httpauth = "*"
-python-slugify = "*"
 
 [dev-packages]
 

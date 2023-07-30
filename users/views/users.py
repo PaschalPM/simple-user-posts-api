@@ -5,7 +5,6 @@ from flask_restful import Resource
 from users.http.handlers.users import get_users_handler, delete_user_handler, update_user_handler
 from users.schema import UserSchema
 from marshmallow import ValidationError
-from core import httpauth
 
 
 class UserResource(Resource):
@@ -14,15 +13,13 @@ class UserResource(Resource):
 
         return get_users_handler(id)
  
- 
-    @httpauth.login_required
+        
     def delete(self, id):
         ''' Deletes a user by id'''
     
         return delete_user_handler(id)
   
-
-    @httpauth.login_required
+  
     def put(self, id):
         ''' Updates a user's property/properties by id'''
 

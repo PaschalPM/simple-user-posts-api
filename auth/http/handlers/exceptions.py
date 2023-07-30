@@ -14,3 +14,8 @@ def exception_handler(err):
                 abort(400, "Username already taken.")
             elif (str(err).__contains__('users.email')):
                 abort(400, "Email already exists.")
+
+    elif isinstance(err, AssertionError):
+        key = str(err).split(':')[0]
+        value = str(err).split(':')[1]
+        abort(400, {key: value})
